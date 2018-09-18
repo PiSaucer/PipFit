@@ -1,0 +1,10 @@
+<svg>
+  <image href="background.png"/>
+  <text id="myLabel"/>
+  <text id="hrm-label" class="sensor-label"></text>
+  <text id="hrm-data" class="sensor-data">[ ]</text>
+  <text id="txtSteps" />
+  <text id="txtBattery"/>
+  <image href="greensteps.png" x="6" y="260" width="10%" height="10%" />
+</svg>
+ 
