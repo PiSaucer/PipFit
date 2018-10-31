@@ -1,10 +1,12 @@
 <svg>
-  <image href="background.png"/>
+  <image href="clockface5.png"/>
   <text id="myLabel"/>
   <text id="hrm-label" class="sensor-label"></text>
   <text id="hrm-data" class="sensor-data">[ ]</text>
   <text id="txtSteps" />
-  <text id="txtBattery"/>
-  <image href="greensteps.png" x="6" y="260" width="10%" height="10%" />
+  <text id="date" />
+  <text width="100%-151" id="dateLabel" class="headerLabel" />
+  <text id="batteryLabel" x="100%-42" class="headerLabel" />
+    <rect id="batteryLevel" x="2" y="2" height="11" />
 </svg>
  

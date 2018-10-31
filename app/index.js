@@ -4,8 +4,12 @@ import document from "document";
 import { preferences } from "user-settings";
 import * as util from "../common/utils";
 import { today } from "user-activity";
-import { battery } from "power";
-import { charger } from "power";
+import { charger, battery } from "power";
+import { goals } from "user-activity";
+import { today } from "user-activity";
+import * as battery from "battery";
+
+import * as util from "../common/utils";
 
 
 
@@ -14,11 +18,16 @@ clock.granularity = "minutes";
 
 // Get a handle on the <text> element
 const myLabel = document.getElementById("myLabel");
+let elDate = document.getElementById("date");
 
 // Update the <text> element every tick with the current time
 clock.ontick = (evt) => {
   let today = evt.date;
+  let dtDate = new Date();
   let hours = today.getHours();
+  
+   elDate.text = `${util.getDay3(dtDate.getDay())} ${dtDate.getDate()} ${util.getMonth3(dtDate.getMonth())}`;
+  
   if (preferences.clockDisplay === "12h") {
     // 12h format
     hours = hours % 12 || 12;
@@ -56,8 +65,24 @@ let txtSteps = document.getElementById("txtSteps");
 // inside the clock tick handler
 txtSteps.text = today.adjusted.steps || 0;
 
-// battery
+//calorires
+console.log((today.local.calories || 0) + " calories");
+
+
+//Battry Levels
 console.log(Math.floor(battery.chargeLevel) + "%");
 console.log("The charger " + (charger.connected ? "is" : "is not") + " connected");
 
-txtBattery.text = battery.chargeLevel
+function updateBattery()
+{
+  let elBattery = document.getElementById("battery");
+  if (battery.chargeLevel > 99)
+  {
+    elBattery.style.display = "none";
+  }
+  else
+  {
+    elBattery.text = Math.floor(battery.chargeLevel) + '%';
+    elBattery.style.display = "inline";
+  }
+}

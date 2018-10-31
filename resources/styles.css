@@ -3,8 +3,8 @@
 }
 
 #myLabel {
-  font-size: 65;
-  font-family: System-Bold;
+  font-size: 60;
+  font-family: Fabrikat-Bold;
   text-length: 32;
   text-anchor: middle;
   x: 72%;
@@ -13,7 +13,7 @@
 }
 
 .sensor-label {
-  font-family: System-Regular;
+  font-family: Fabrikat-Bold;
   fill: #00f900;
   text-anchor: middle;
   text-length: 32;
@@ -22,43 +22,41 @@
 }
 
 .sensor-data {
-  font-family: System-Bold;
+  font-family: Fabrikat-Bold;
   fill: #00f900;
   text-anchor: middle;
   text-length: 32;
-  x: 82%;
-  y: 65%+0;
+  x: 83%;
+  y: 60%+0;
   font-size: 40;
 }
 
 #txtSteps {
-  font-family: System-Bold;
+  font-family: Fabrikat-Bold;
   fill: #00f900;
   text-anchor: middle;
   text-length: 32;
-  x: 31%;
-  y: 96%+0;
-  font-size: 40;
+  x: 82%;
+  y: 92%+0;
+  font-size: 25;
 }
 
-.date-text {
-  font-family: Seville;
-  font-size: 26;
+#battery {
+  x: 0%;
+  y: 10%;
+}
+
+#date {
+ font-size: 30;
+  font-family: Fabrikat-Bold;
+  text-length: 35;
   text-anchor: middle;
-  text-length: 32;
-  x: 50%;
-  y: 50%+39;
-  width: 100%;
-  height: 100%;
-  fill: #FFFFFF;
-}
-
-#txtBattery {
-  font-family: System-Bold;
+  x: 72%;
+  y: 35%+0;
   fill: #00f900;
-  text-anchor: middle;
-  text-length: 32;
-  x: 31%;
-  y: 96%+0;
-  font-size: 40;
+}
+
+#batteryLabel {
+  text-length: 4;
+  text-anchor: end;
 }
