@@ -1,12 +1,17 @@
 <svg>
-  <image href="clockface5.png"/>
+  <image href="clockfaces/clockface5.png"/>
   <text id="myLabel"/>
   <text id="hrm-label" class="sensor-label"></text>
-  <text id="hrm-data" class="sensor-data">[ ]</text>
+  <text id="hrm-data" class="sensor-data"> </text>
   <text id="txtSteps" />
   <text id="date" />
+  <text id="myCals" />
   <text width="100%-151" id="dateLabel" class="headerLabel" />
-  <text id="batteryLabel" x="100%-42" class="headerLabel" />
-    <rect id="batteryLevel" x="2" y="2" height="11" />
+  <!-- text id="battery-label" class="battery-label" x="40" y="30">[ ]</text> -->
+  
+  <!-- battery -->
+  <section x="7%+0" y="25" width="69" height="18">
+    <image id="batteryIcon" x="0" y="0" width="12" height="18" href="battery_images/battery_full.png" load="sync" />
+  </section>
 </svg>
  

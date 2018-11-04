@@ -8,10 +8,13 @@ import { charger, battery } from "power";
 import { goals } from "user-activity";
 import { today } from "user-activity";
 import * as battery from "battery";
+import { me as device } from "device";
+import * as messaging from "messaging";
+
 
 import * as util from "../common/utils";
 
-
+console.log("PiSaucer's PipFit")
 
 // Update the clock every minute
 clock.granularity = "minutes";
@@ -68,21 +71,16 @@ txtSteps.text = today.adjusted.steps || 0;
 //calorires
 console.log((today.local.calories || 0) + " calories");
 
+let dailycals = document.getElementById("myCals");
 
-//Battry Levels
-console.log(Math.floor(battery.chargeLevel) + "%");
-console.log("The charger " + (charger.connected ? "is" : "is not") + " connected");
 
-function updateBattery()
-{
-  let elBattery = document.getElementById("battery");
-  if (battery.chargeLevel > 99)
-  {
-    elBattery.style.display = "none";
+//settings
+let background = document.getElementById("background");
+
+messaging.peerSocket.onmessage = evt => {
+  console.log(`App received: ${JSON.stringify(evt)}`);
+  if (evt.data.key === "color" && evt.data.newValue) {
+    let color = JSON.parse(evt.data.newValue);
+    console.log(`Setting background color: ${color}`);
   }
-  else
-  {
-    elBattery.text = Math.floor(battery.chargeLevel) + '%';
-    elBattery.style.display = "inline";
-  }
-}
+};

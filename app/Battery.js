@@ -1,30 +1,20 @@
-import document from "document";
-import { battery } from "power";
-import * as util from "../common/utils";
 
-// Get a handle on the <text> element.
-const batteryLevel = document.getElementById("batteryLevel");
-const batteryLabel = document.getElementById("batteryLabel");
+import { battery } from 'power';
 
-// Function that get the color for the battery level label based on the current charge level.
-function chargeLevelToColor(value) {
-  const percent = Math.round(value);
-  let color = 'white';
-  if (percent <= 10) {
-    color = 'fb-red';
-  } else if (percent <= 25) {
-    color = 'fb-peach';
-  } else if (percent <= 90) {
-    color = 'fb-mint';
+// battery
+const batteryIcon = document.getElementById('batteryIcon');
+function updateBattery() {
+  const { chargeLevel } = battery;
+  if (chargeLevel >= 60) {
+    batteryIcon.image = 'images/battery_full.png';
+  } else if (chargeLevel >= 20) {
+    batteryIcon.image = 'images/battery_mid.png';
   } else {
-    color = 'fb-cyan';
+    batteryIcon.image = 'images/battery_low.png';
   }
-  return color;
+  batteryNum1.image = `images/num_s_${getNumberOfPlace(chargeLevel, 1)}.png`;
+  batteryNum2.image = `images/num_s_${getNumberOfPlace(chargeLevel, 2)}.png`;
+  batteryNum3.image = `images/num_s_${getNumberOfPlace(chargeLevel, 3)}.png`;
 }
 
-export function update() {
-  // Update the <text> and <rect> element with the battery level.
-  batteryLevel.width = Math.round(battery.chargeLevel * 30 / 100);
-  batteryLevel.style.fill = chargeLevelToColor(battery.chargeLevel);
-  batteryLabel.text = util.monoDigits(battery.chargeLevel) + '%';
-}
+console.log(Math.floor(battery.chargeLevel) + "%");
