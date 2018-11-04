@@ -1,6 +1,9 @@
 # PipFit
 ![fitbit version](https://img.shields.io/badge/Fitbit%20Studio-1.0-blue.svg)
 
+![Screen Shot](https://raw.githubusercontent.com/PiSaucer/PipFit/master/screenshots/Capture1.PNG)
+
+
 The Pipfit is Fitbit Clock Face that looks like a Pip-Boy from Fallout
 
 
