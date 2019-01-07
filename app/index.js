@@ -14,7 +14,7 @@ import * as messaging from "messaging";
 
 import * as util from "../common/utils";
 
-console.log("PiSaucer's PipFit")
+console.log("PiSaucer's PipFit Version 1.1")
 
 // Update the clock every minute
 clock.granularity = "minutes";
@@ -72,15 +72,3 @@ txtSteps.text = today.adjusted.steps || 0;
 console.log((today.local.calories || 0) + " calories");
 
 let dailycals = document.getElementById("myCals");
-
-
-//settings
-let background = document.getElementById("background");
-
-messaging.peerSocket.onmessage = evt => {
-  console.log(`App received: ${JSON.stringify(evt)}`);
-  if (evt.data.key === "color" && evt.data.newValue) {
-    let color = JSON.parse(evt.data.newValue);
-    console.log(`Setting background color: ${color}`);
-  }
-};
