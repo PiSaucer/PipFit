@@ -1,5 +1,5 @@
 # PipFit
-![fitbit version](https://img.shields.io/badge/Fitbit%20Studio-1.0-blue.svg)
+![fitbit version](https://img.shields.io/badge/Fitbit%20Studio-3.0-blue.svg)
 
 ![Screen Shot](https://raw.githubusercontent.com/PiSaucer/PipFit/master/screenshots/Capture1.PNG)
 
