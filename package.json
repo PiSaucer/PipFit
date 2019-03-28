@@ -7,20 +7,21 @@
     "wipeColor": "",
     "requestedPermissions": [
       "access_activity",
-      "access_user_profile",
       "access_heart_rate",
-      "run_background"
+      "access_user_profile"
     ],
     "buildTargets": [
-      "meson"
+      "meson",
+      "gemini"
     ],
     "i18n": {
       "en": {
         "name": "PipFit"
       }
-    }
+    },
+    "defaultLanguage": "en-US"
   },
   "devDependencies": {
-    "@fitbit/sdk": "~3.0.0"
+    "@fitbit/sdk": "~3.1.0"
   }
 }

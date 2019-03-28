@@ -37,7 +37,7 @@
   text-anchor: middle;
   text-length: 32;
   x: 82%;
-  y: 92%+0;
+  y: 93%+0;
   font-size: 25;
 }
 
@@ -52,21 +52,33 @@
   fill: #00f900;
 }
 
-.battery-label {
-  font-size: 30;
-  font-family: Seville-Bold;
-  text-length: 32;
-  text-anchor: start;
-  fill: fb-black;
+#myCalories {
+  font-size: 25;
+  font-family: Fabrikat-Bold;
+  text-anchor: middle;
+  text-length: 35;
+  x: 82%;
+  y: 83%+0;
+  fill: #00f900;
 }
 
-#myCals {
-  font-size: 28;
-  font-family: System-Regular;
-  text-length: 80;
+#batteryLabel{
+  font-size: 25;
+  font-family: Fabrikat-Bold;
   text-anchor: middle;
-  x: 50%;
-  y: 235;
-  fill: #f8fcf8;
+  text-length: 35;
+  x: 15%;
+  y: 15%+0;
+  fill: #00f900;
+}
+
+#activeMinutes{
+  font-size: 25;
+  font-family: Fabrikat-Bold;
+  text-anchor: middle;
+  text-length: 35;
+  x: 82%;
+  y: 73%+0;
+  fill: #00f900;
 }
 

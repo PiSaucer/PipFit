@@ -14,7 +14,7 @@ import * as messaging from "messaging";
 
 import * as util from "../common/utils";
 
-console.log("PiSaucer's PipFit Version 1.1")
+console.log("PiSaucer's PipFit Version 3.5")
 
 // Update the clock every minute
 clock.granularity = "minutes";
@@ -69,6 +69,30 @@ let txtSteps = document.getElementById("txtSteps");
 txtSteps.text = today.adjusted.steps || 0;
 
 //calorires
-console.log((today.local.calories || 0) + " calories");
+const myCalories = document.getElementById("myCalories");
 
-let dailycals = document.getElementById("myCals");
+function getCalories() {
+  let val = (today.adjusted.calories || 0);
+  myCalories.text = `${val}`
+}
+
+getCalories();
+
+//batt
+const batteryHandle = document.getElementById("batteryLabel");
+
+  // Battery Measurement
+  let batteryValue = battery.chargeLevel; // measure the battery level and send it to the variable batteryValue
+  
+  // Assignment value battery
+  batteryHandle.text = `${batteryValue}%`;
+
+// active time
+const activeMinutes = document.getElementById("activeMinutes");
+
+function getActiveMinutes() {
+  let val = (today.adjusted.activeMinutes || 0);
+  activeMinutes.text =`${val}`
+}
+
+getActiveMinutes();

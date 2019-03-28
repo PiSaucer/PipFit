@@ -5,13 +5,9 @@
   <text id="hrm-data" class="sensor-data"> </text>
   <text id="txtSteps" />
   <text id="date" />
-  <text id="myCals" />
   <text width="100%-151" id="dateLabel" class="headerLabel" />
-  <!-- text id="battery-label" class="battery-label" x="40" y="30">[ ]</text> -->
-  
-  <!-- battery -->
-  <!-- <section x="7%+0" y="25" width="69" height="18">
-    <image id="batteryIcon" x="0" y="0" width="12" height="18" href="battery_images/battery_full.png" load="sync" />
-  </section> -->
+  <text id="myCalories"></text>
+  <text id="batteryLabel"></text>
+  <text id="activeMinutes"></text>
 </svg>
  
